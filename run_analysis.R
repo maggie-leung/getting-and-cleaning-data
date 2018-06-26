@@ -50,4 +50,4 @@ complete_df <- cbind(subj_df, x_df, y_df)
 ## creates a second data set with the average
 average_df <- aggregate(x = complete_df, by = list(activity = complete_df$Activity, subj = complete_df$Subject), FUN = mean)
 average_df <- average_df[, !(colnames(average_df) %in% c("subj", "activity"))]
-write.table(average_df, 'Average_Result.txt', row.name=FALSE)
+write.table(average_df, 'tidy_data.txt', row.name=FALSE)
